@@ -67,7 +67,6 @@ buttonsContainer.addEventListener("click", event => {
     } else if (symbolToValue[buttonText] === 'C') {
         resultInput.value = "";
     } else if (['множь', 'сделить'].includes(buttonText)) {
-        if (!resultInput.value.match(/\d$/)) return;
         resultInput.value += ` ${buttonText} на `;
     } else if (Object.keys(symbolToValue).includes(buttonText)) {
         const lastChar = resultInput.value.charAt(resultInput.value.length - 1);
