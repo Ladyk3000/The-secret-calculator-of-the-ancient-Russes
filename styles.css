@@ -2,10 +2,17 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f1f1f1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     margin: 0;
+}
+
+h1 {
+    font-family: 'Old Standard TT', serif;
+    font-size: 48px;
+    top: 0;
 }
 
 .calculator {
@@ -15,9 +22,6 @@ body {
     padding: 20px;
     width: 50%;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .display {
