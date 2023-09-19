@@ -9,10 +9,10 @@ const buttonsContainer = document.querySelector(".buttons");
 // };
 
 const symbolToValue = {
-    'Сѣдмь': '7', 'Осмь': '8', 'Дьвѧтце': '9', 'множь': '*',
-    'Чѧтьре': '4', 'Пѧтьѣ': '5', 'Шєсть': '6', 'сделить': '/',
-    'Одінъ': '1', 'Двѣ': '2', 'Тріеца': '3', 'сбрать': '+',
-    'Нуль': '0', 'събросъ': 'C', 'такесть': '=', 'отечать': '-',
+    'Сѣдмь': '7', 'Осмь': '8', 'Дьвѧтце': '9', 'Множити': '*',
+    'Чѧтьре': '4', 'Пѧтьѣ': '5', 'Шєсть': '6', 'Съдѣлити': '/',
+    'Одінъ': '1', 'Двѣ': '2', 'Тріеца': '3', 'Събрати': '+',
+    'Нуль': '0', 'Събросъ': 'C', 'Такъсть': '=', 'Отѣчити': '-',
 };
 
 // const numbersToText = {
@@ -34,7 +34,7 @@ const numbersToText = {
     '2': 'Двѣ',
     '3': 'Тріеца',
     '4': 'Чѧтьре',
-    '5': 'Пѧтьѣ',
+    '5': 'Пѣть',
     '6': 'Шєсть',
     '7': 'Сѣдмь',
     '8': 'Осмь',
@@ -62,11 +62,11 @@ buttonsContainer.addEventListener("click", event => {
             const roundedResult = parseFloat(numericResult.toFixed(1));
             resultInput.value = roundedResult.toString().split('').map(char => numbersToText[char] || char).join(' ');
         } catch (error) {
-            resultInput.value = "Околица";
+            resultInput.value = "Околіца";
         }
     } else if (symbolToValue[buttonText] === 'C') {
         resultInput.value = "";
-    } else if (['множь', 'сделить'].includes(buttonText)) {
+    } else if (['Множити', 'Съдѣлити'].includes(buttonText)) {
         resultInput.value += ` ${buttonText} на `;
     } else if (Object.keys(symbolToValue).includes(buttonText)) {
         const lastChar = resultInput.value.charAt(resultInput.value.length - 1);
