@@ -47,10 +47,6 @@ for (const key in symbolToValue) {
     buttonsContainer.appendChild(button);
 }
 
-function getKeyByValue(object, value) {
-    return Object.keys(object).find(key => object[key] === value);
-}
-
 buttonsContainer.addEventListener("click", event => {
     const buttonText = event.target.textContent;
 
